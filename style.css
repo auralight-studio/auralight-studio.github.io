@@ -86,7 +86,7 @@ nav ul li a:hover {
 #hero {
     background-color: var(--dark-bg); /* Latar belakang gelap */
     color: var(--light-text-color);
-    padding: 120px 0; /* Padding sedikit lebih besar */
+    padding: 60px 0; /* Padding sedikit lebih besar */
     text-align: center;
     position: relative;
     overflow: hidden;
