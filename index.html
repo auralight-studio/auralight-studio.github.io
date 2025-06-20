@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auralight Studio - Menghidupkan Kenangan dalam Cahaya</title>
+    <title>Auralight Studio</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -22,24 +22,21 @@
                     <img src="images/auralight-studio-logo.png" alt="Auralight Studio Logo">
                 </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="#produk">Produk</a></li>
-                    <li><a href="#galeri">Galeri</a></li>
-                    <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <section id="hero">
+        <div class="hero-background-slideshow">
+            <img src="images/hero1.jpg" alt="Hero Background 1" class="active">
+            <img src="images/hero2.jpg" alt="Hero Background 2">
+            <img src="images/hero3.jpg" alt="Hero Background 3">
+            <img src="images/hero4.jpg" alt="Hero Background 4">
+        </div>
         <div class="container">
             <div class="hero-content">
                 <h1>Abadikan Setiap Momen dalam Bingkai Cahaya yang Memukau.</h1>
                 <p>Aura Frame dari Auralight Studio: Karya Seni Digital yang Menyala, Disesuaikan untuk Anda.</p>
-                <a href="#produk" class="btn">Jelajahi Koleksi Kami</a>
+                <a href="#galeri" class="btn">Jelajahi Koleksi Kami</a>
             </div>
             </div>
     </section>
@@ -78,23 +75,22 @@
             <h2>Inspirasi Aura Frame Kami</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/gallery-cat-stargazing.jpg" alt="Aura Frame Stargazing Cat">
-                    <div class="overlay">Stargazing Cat Light Painting</div>
+                    <img src="images/gallery-1.png" alt="Aura Frame Stargazing Cat">
+                    <div class="overlay">Stargazing Cat</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-landscape.jpg" alt="Aura Frame Landscape Aurora">
-                    <div class="overlay">Landscape Aurora</div>
+                    <img src="images/gallery-2.png" alt="Aura Frame Cristiano Ronaldo">
+                    <div class="overlay">Cristiano Ronaldo</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-family.jpg" alt="Aura Frame Family Portrait">
-                    <div class="overlay">Family Portrait with Warm Glow</div>
+                    <img src="images/gallery-3.png" alt="Aura Frame Family Portrait">
+                    <div class="overlay">Son Goku</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-abstract.jpg" alt="Aura Frame Abstract Art">
-                    <div class="overlay">Abstract Light Play</div>
+                    <img src="images/gallery-4.png" alt="Aura Frame Abstract Art">
+                    <div class="overlay">Miles & Gwen</div>
                 </div>
                 </div>
-            <a href="#" class="btn btn-secondary">Lihat Semua Karya Kami</a>
         </div>
     </section>
 
@@ -174,5 +170,19 @@
         </div>
     </footer>
 
-    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.hero-background-slideshow img');
+            let currentImageIndex = 0;
+
+            function changeBackground() {
+                images[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].classList.add('active');
+            }
+
+            setInterval(changeBackground, 5000); // Change image every 5 seconds
+        });
+    </script>
+</body>
 </html>
